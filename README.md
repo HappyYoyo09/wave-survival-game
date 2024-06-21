@@ -48,4 +48,15 @@ steps:
 
 that's the hour up, so i'll work on that next time. i'malso going to try and get a proper github client working so that I can commit within the hour rather than just at the end of it, but since i'm coding this on linux, that's easier said than done.
 i'll update on the github client either in the next hour, or in its own section.
-it's just occured to me that last time i didn't upload the scripts folder, sorry about that! it should be included in this commit, nothing has changed between the old and the new scripts that i haven't mentioned, though i understand if the ticket from last time doesn't count.
+
+# github client
+I managed to get a github client working, i'm still not fully confident with it, but I should be able to commit more frequently, and be able to use things like a .gitignore file.
+
+of course right after writing this I run into issues with the github client,
+
+I might have solved the issue, the repository is now called wave-survival-game because that is what it is called on my device. when publishing a commit the client always looks for a github repo matching the folder name, even if you have told it that the repo is actually named something different.
+
+I solved all the issues with the client, only to find out that if the connection cuts out, even for a second, the entire upload fails.
+this is a huge issue for me, as I have ridiculously bad wifi that consistently cuts out every couple of seconds, though only for a second at a time.
+this means that I can't use git to upload files while the wifi is doing this. i've tried using a hotspot and mobile data, but that is also too inconsistent.
+I'm uploading this from the website, hopefully someone can point me in the right direction for a soloution to this
