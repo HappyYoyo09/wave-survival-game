@@ -48,4 +48,4 @@ steps:
 
 that's the hour up, so i'll work on that next time. i'malso going to try and get a proper github client working so that I can commit within the hour rather than just at the end of it, but since i'm coding this on linux, that's easier said than done.
 i'll update on the github client either in the next hour, or in its own section.
-
+it's just occured to me that last time i didn't upload the scripts folder, sorry about that! it should be included in this commit, nothing has changed between the old and the new scripts that i haven't mentioned, though i understand if the ticket from last time doesn't count.
