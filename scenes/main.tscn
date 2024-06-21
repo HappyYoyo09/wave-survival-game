@@ -14,3 +14,4 @@ process_callback = 0
 position_smoothing_enabled = true
 
 [node name="enemy" parent="." instance=ExtResource("2_w1tw8")]
+position = Vector2(408, 328)

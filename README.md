@@ -17,7 +17,35 @@ after spending an embarrasingly long time trying to figure out why the `distance
 
 i'm now trying to figure out what set of conditions would check if a value is within a range
 
-time's up, I haven't finished the enemy yet, they still flip arround when they reach their target, so i'll try and fix that next time. 
+time's up, I haven't finished the enemy yet, they still flip arround when they reach their target, so i'll try and fix that next time.
 
+# hour 2
 
+## finishing the enemy's movement
+it's a couple days later, and i figured out that if a subtract the target position by the velocity, the result will be the difference between the two. if I do this in code before the if condition, I will be able to use that value in the condition.
+
+i've done that ,and I now have the difference in positions between the two positions, so if the target is 1 px down left to the enemy, the difference would be (1,1), i just need to figure out how to turn that into a distance.
+normally for this you would use pythagorean theorum, but that stops working once one of the two numbers is negative, while the other is positive. since I don't need the direction, I can just flip the negative number to a positive one.
+
+i've now done that, to finish the formula I need to sqaure the numbers, which can be done with `^2`, but i also need to be able to square root the answer, which I don't know how to do.
+I first found a reddit post asking how to do roots other than square and cube roots, but i couldn't understand what they meant, they did give code, but I decided to look around for a square root function for easier readability, especially given that I don't understand the code they gave, so would be completely unable to read it later.
+
+found it, turns out it's `sqrt()`, I ended up just asking chatGPT, since there was no documentation to be seen on the official docs, and I didn't want to ask on the forms for something that should be so easy to find.
+
+turns out that using `^` doesn't actually work, no idea where I got that idea from, but i can just replace it with either `pow()` or `\*\*`
+
+it works! that was surprisingly hard and almost certainly overcomplicated, but it does work. i might try and turn it into my own function if I end up needing it again, but I honestly doubt I will.
+
+## passing in the player's coordinates
+I think the best approach to this would be an autoload combined with a `player_pos()` signal, I can declare the signal in an autoload, that way any scene can always know the player's position.
+i've used signals before, it can be quite frustrating passing a signal from an autoload to a scene, though i've largly figured it out now.
+
+steps:
+	1) make an autoload and declare a signal in it, you can declare a signal using the `signal` keyword
+	2) add any arguments in brackets after the signal name, like in a function
+	3) connect the signal in script using `autoloadName.signalName.connect("func name")` with the func name being the function you want the signal to call.
+	4) make the function as normal
+
+that's the hour up, so i'll work on that next time. i'malso going to try and get a proper github client working so that I can commit within the hour rather than just at the end of it, but since i'm coding this on linux, that's easier said than done.
+i'll update on the github client either in the next hour, or in its own section.
 
