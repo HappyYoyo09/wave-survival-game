@@ -60,3 +60,9 @@ I solved all the issues with the client, only to find out that if the connection
 this is a huge issue for me, as I have ridiculously bad wifi that consistently cuts out every couple of seconds, though only for a second at a time.
 this means that I can't use git to upload files while the wifi is doing this. i've tried using a hotspot and mobile data, but that is also too inconsistent.
 I'm uploading this from the website, hopefully someone can point me in the right direction for a soloution to this
+
+someone said that the git CLI (command line interface) can pick up where it left off, so i've decided to try and learn it. i'm not completely new to the command line, but i am new to git, so this is likely going to be a big challenge. this is turning into a project in its own right 😅.
+
+because i'm working on version control, you likely won't see this until it is finished, i'm not uploading this paragraph through the web UI, so if you see this, just know that I finally managed to get git working.
+
+%%I'm trying to install the GitHub CLI so that i can login to GitHub, i'm on steamOS installing this through pacman, so i have to disable the read only filesystem. because of this, it could potentially be reverted by a system update. I'm just leaving this here incase It breaks in the future%%
