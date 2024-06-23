@@ -65,4 +65,4 @@ someone said that the git CLI (command line interface) can pick up where it left
 
 because i'm working on version control, you likely won't see this until it is finished, i'm not uploading this paragraph through the web UI, so if you see this, just know that I finally managed to get git working.
 
-%%I'm trying to install the GitHub CLI so that i can login to GitHub, i'm on steamOS installing this through pacman, so i have to disable the read only filesystem. because of this, it could potentially be reverted by a system update. I'm just leaving this here incase It breaks in the future%%
+it works! i finally have it working, i had some issues about authenticating via the git CLI, turns out github has another CLI that you have to use for that, but i have finally managed to get git working. i'm very glad that i've managed to do this, because it hopefully means that i will be able to use it for future projects!
