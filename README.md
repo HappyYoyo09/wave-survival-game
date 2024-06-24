@@ -75,4 +75,26 @@ now that github is working I can resume work on the project. if i make any commi
 ### commit 1
 for now I want to try and get the enemy to move towards the player instead of the cursor, i already covered how i'm going to do that last time.
 
+### commit 2
+
+now that i've done that, it's time to make the enemy do something other than walk towards the player. again, I will be doing this using signals, though this time i will use collision layers and an area2d.
+
+I have an area2d which will act as the player's hurtbox. I have also set their collisions to only interact with the world, not enemies. this is so enemies no longer push the player, and the collisions don't stop the enemies hitting the hitbox.
+
+the enemies have a very small change to their scene, only putting them on the new enemy layer. they interact with the world and the player.
+
+i've implemented a very rudimentary health system, but have discovered a flaw. the area2D only checks for collisions when a body enters it, not while it's in it.i'm not sure how to fix this, though I think my current approach is flawed anyway.
+
+i'm going to try and implement a hitbox/hurtbox system, where the hitboxes are used to deal damage, and hurtboxes are used to recieve damage. I can do this by creating scenes with scrpts attached to them.
+i'm not sure how i would get these scenes to communicate with their parent though, which is an issue given I need the node to be able to be able to be attached to any scene.
+most inter-scene communication (that i know of) uses signals, which I could supply arguments to allow configurable damage, though i'm not sure how I would designate a target.
+
+I know you can supply a node as an argument, though i'm not very familiar with that system, so i would need to figure out how that works, I would also need to get the parent node, which i also don't know how to do.
+
+after a quick google search, I found you can get a reference to the parent node.
+
+I'm planning on having most of the code in the hurtbox, so once a hurtbox detects a hitbox, it somehow uses that reference to the parent to deal damage.
+
+
+
 

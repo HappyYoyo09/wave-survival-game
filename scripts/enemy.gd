@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED = 300.0
+@export var SPEED = 150
 @export var accuracy = 10
 var target = position #fallback if it checks for the target pos before the target pos is set
 func _ready():
@@ -19,7 +19,6 @@ func _physics_process(delta):
 		difference.y *= -1
 	
 	var distance_to_target = sqrt(difference.x ** 2 + difference.y ** 2)
-	print(distance_to_target)
 	if !distance_to_target <= accuracy:
 		look_at(target)
 		velocity = transform.x * SPEED

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://6hrbrqlk3ex5"]
+[gd_scene load_steps=5 format=3 uid="uid://6hrbrqlk3ex5"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_o3781"]
 [ext_resource type="Texture2D" uid="uid://x2qbafiqsrcc" path="res://icon.png" id="2_2dsgr"]
@@ -6,7 +6,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyddi"]
 size = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4nal"]
+size = Vector2(128, 128)
+
 [node name="player" type="CharacterBody2D"]
+z_index = 10
+collision_mask = 2
 script = ExtResource("1_o3781")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,3 +19,17 @@ texture = ExtResource("2_2dsgr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uyddi")
+disabled = true
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+shape = SubResource("RectangleShape2D_s4nal")
+
+[node name="immunity time" type="Timer" parent="."]
+editor_description = "the time the player is immune after getting hit"
+one_shot = true
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="timeout" from="immunity time" to="." method="_on_immunity_time_timeout"]
