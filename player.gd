@@ -15,5 +15,7 @@ func _physics_process(delta):
 		velocity.y = direction_y * SPEED
 	else:
 		velocity.y = 0
-
+	
+	Autoload.player_pos.emit(position)
+	
 	move_and_slide()

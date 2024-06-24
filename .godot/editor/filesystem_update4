@@ -1,0 +1,7 @@
+res://scenes/main.tscn
+res://README.md
+res://scenes/autoload.tscn
+res://player.gd
+res://scenes/player.tscn
+res://scripts/enemy.gd
+res://scenes/enemy.tscn

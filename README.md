@@ -66,3 +66,13 @@ someone said that the git CLI (command line interface) can pick up where it left
 because i'm working on version control, you likely won't see this until it is finished, i'm not uploading this paragraph through the web UI, so if you see this, just know that I finally managed to get git working.
 
 it works! i finally have it working, i had some issues about authenticating via the git CLI, turns out github has another CLI that you have to use for that, but i have finally managed to get git working. i'm very glad that i've managed to do this, because it hopefully means that i will be able to use it for future projects!
+
+
+# hour 3
+
+now that github is working I can resume work on the project. if i make any commits during the hour I will try to note them here.
+
+### commit 1
+for now I want to try and get the enemy to move towards the player instead of the cursor, i already covered how i'm going to do that last time.
+
+

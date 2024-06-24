@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
 
+[autoload]
+
+Autoload="*res://scenes/autoload.tscn"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
